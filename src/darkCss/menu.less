@@ -1,0 +1,16 @@
+@darkColor: #1d1e1f;
+html.dark {
+  .navBox{
+    background: @darkColor !important;
+    border-right: 1px solid rgb(121, 115, 115);
+    .el-menu .el-menu-item{
+      color: #fff;
+    }
+    /deep/ .is-active{
+      background: #000;
+    }
+    /deep/ .el-menu .el-sub-menu .el-sub-menu__title{
+      color: #fff !important;
+    }
+  }
+}
