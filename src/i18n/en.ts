@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:04:08
+ * @LastEditTime: 2023-09-08 14:44:50
  */
 // en.ts 文件内容
 
@@ -23,7 +23,7 @@ export default {
   menuRouter: {
     index: 'index',
     iconsComponents: 'systemManagement',
-    list: 'list'
+    list: 'articleList'
   },
   home: {
     card: 'New Visits',

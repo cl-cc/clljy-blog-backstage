@@ -67,7 +67,7 @@
       <el-switch v-model="isDark" />
     </div>
     <div class="login-main">
-      <h3>{{ $t('login.title') }}</h3>
+      <!-- <h3>{{ $t('login.title') }}</h3> -->
       <div class="login-info">
         <el-input v-model="info.username" class="login_ipt" style="width: 400px" :prefix-icon="Avatar" :placeholder="$t('login.ipt_name')"></el-input>
       </div>
@@ -75,15 +75,15 @@
         <el-input v-model="info.password" type="password" class="login_ipt" style="width: 400px" :prefix-icon="WarningFilled" :placeholder="$t('login.ipt_psd')"></el-input>
       </div>
       <el-button type="info" v-btnAntiShake="sign" class="btn">{{ $t('login.btn_login') }}</el-button>
-      <div class="operation_login">
+      <!-- <div class="operation_login">
         <div><el-checkbox class="operation_login-checkbox" v-model="checked3" />{{ $t('login.tips_btn') }}</div>
         <div class="forget" @click="errorClick">{{ $t('login.forget_psd') }}</div>
-      </div>
-      <div class="other_login" @click="errorClick">
+      </div> -->
+      <!-- <div class="other_login" @click="errorClick">
         <div>{{ $t('login.btn_bottom') }}</div>
         <div>{{ $t('login.btn_bottom1') }}</div>
         <div>{{ $t('login.btn_bottom2') }}</div>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>

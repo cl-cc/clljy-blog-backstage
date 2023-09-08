@@ -13,6 +13,7 @@
     "@logicflow/extension": "^1.1.11",
     "@vueuse/components": "^8.9.3",
     "@vueuse/core": "^8.9.3",
+    "@wangeditor/editor-for-vue": "^5.1.12",
     "animate.css": "^4.1.1",
     "axios": "^0.26.1",
     "echarts": "^5.3.1",

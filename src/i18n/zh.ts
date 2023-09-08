@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:03:56
+ * @LastEditTime: 2023-09-08 14:44:37
  */
 // zh.ts 文件内容
 
@@ -23,7 +23,7 @@ export default {
   menuRouter: {
     index: '系统首页',
     iconsComponents: '系统管理',
-    list: '列表'
+    list: '文章列表'
   },
   home: {
     card: '最新访问',

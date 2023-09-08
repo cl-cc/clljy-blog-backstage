@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-03-23 15:45:33
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:24:49
+ * @LastEditTime: 2023-09-08 14:56:46
 -->
 <script setup lang="ts">
   import 'animate.css';
@@ -24,8 +24,9 @@
   @import url(@/darkCss/content.less);
   .content {
     width: 100%;
-    height: 100%;
     padding: 10px;
     background: #fff;
+    overflow: scroll;
+    padding-bottom: 100px;
   }
 </style>

@@ -92,13 +92,11 @@
 
   //删除
   function del(id: number) {
-    console.log(id);
     ElMessageBox.confirm('确认删除?', '提示', {
       confirmButtonText: '确认',
       cancelButtonText: '关闭',
       type: 'warning'
     }).then(() => {
-      console.log(id);
       ElMessage({
         type: 'success',
         message: '删除成功 - 未接接口'

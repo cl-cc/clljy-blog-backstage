@@ -4,13 +4,14 @@
  * @Author: 程
  * @Date: 2022-03-23 15:44:25
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:24:55
+ * @LastEditTime: 2023-09-08 14:46:05
 -->
 <script setup lang="ts">
   import screenfull from '@/components/screenfull/index.vue';
 </script>
 <template>
   <div class="header">
+    <div class="title">clljy文章后台管理</div>
     <div class="header-box">
       <screenfull />
     </div>
@@ -18,7 +19,7 @@
 </template>
 <style scoped lang="less">
   @import url(@/darkCss/header.less);
-  @color-f: #fff;
+  @color-f: #409eff;
   @color-c: #ccc;
   .header {
     width: 100%;
@@ -26,8 +27,15 @@
     background: @color-f;
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    .title {
+      font-weight: bold;
+      margin-left: 20px;
+      font-size: 20px;
+      color: #fff;
+    }
     &-box {
-      width: 100%;
+      width: 50%;
       display: flex;
       justify-content: flex-end;
     }
