@@ -6,9 +6,7 @@
  * @LastEditors: 程
  * @LastEditTime: 2022-07-19 14:19:13
 -->
-<template>
-  <div id="complexPiechart"></div>
-</template>
+
 <script setup lang="ts">
 import * as echarts from 'echarts';
 import { useTestStore } from '@/store';
@@ -87,6 +85,9 @@ function initChart() {
   });
 }
 </script>
+<template>
+  <div id="complexPiechart"></div>
+</template>
 <style lang="less" scoped>
 #complexPiechart {
   width: 100%;

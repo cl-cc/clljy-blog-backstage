@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2023-03-03 16:02:09
+ * @LastEditTime: 2023-09-08 14:04:08
  */
 // en.ts 文件内容
 
@@ -22,21 +22,8 @@ export default {
   },
   menuRouter: {
     index: 'index',
-    iconsComponents: 'icons/components',
-    list: 'list',
-    complexList: 'complexList',
-    packageList: 'packageList',
-    signList: 'signList',
-    simpleList: 'simpleList',
-    errorPage: 'errorPage',
-    fourHundredAndOne: 'fourHundredAndOne',
-    fourHundredAndFour: 'fourHundredAndFour',
-    dataVisualization: 'dataVisualization',
-    trendCharts: 'trendCharts',
-    tool: 'tool',
-    screenshotTool: 'screenshotTool',
-    openai: 'OpenAI',
-    chatbot: 'chatbot'
+    iconsComponents: 'systemManagement',
+    list: 'list'
   },
   home: {
     card: 'New Visits',

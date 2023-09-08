@@ -1,36 +1,6 @@
-<template>
-  <div class="login">
-    <div class="screenfull-lang" @click="change_Lang">
-      <i></i>
-    </div>
-    <div class="toggle">
-      <span @click.stop="toggleDark()">暗黑模式</span>
-      <el-switch v-model="isDark" />
-    </div>
-    <div class="login-main">
-      <h3>{{ $t('login.title') }}</h3>
-      <div class="login-info">
-        <el-input v-model="info.username" class="login_ipt" style="width: 400px" :prefix-icon="Avatar" :placeholder="$t('login.ipt_name')"></el-input>
-      </div>
-      <div class="login-info">
-        <el-input v-model="info.password" class="login_ipt" style="width: 400px" :prefix-icon="WarningFilled" :placeholder="$t('login.ipt_psd')"></el-input>
-      </div>
-      <el-button type="info" v-btnAntiShake="sign" class="btn">{{ $t('login.btn_login') }}</el-button>
-      <div class="operation_login">
-        <div><el-checkbox class="operation_login-checkbox" v-model="checked3" />{{ $t('login.tips_btn') }}</div>
-        <div class="forget" @click="errorClick">{{ $t('login.forget_psd') }}</div>
-      </div>
-      <div class="other_login" @click="errorClick">
-        <div>{{ $t('login.btn_bottom') }}</div>
-        <div>{{ $t('login.btn_bottom1') }}</div>
-        <div>{{ $t('login.btn_bottom2') }}</div>
-      </div>
-    </div>
-  </div>
-</template>
 <script setup lang="ts">
-  import { ElMessage } from 'element-plus';
-  import { Avatar, WarningFilled, SetUp } from '@element-plus/icons-vue';
+  import { ElMessage, ElLoading } from 'element-plus';
+  import { Avatar, WarningFilled } from '@element-plus/icons-vue';
   import { loginApi } from '@/api/index';
   import { useI18n } from 'vue-i18n';
   import { useDark, useToggle } from '@vueuse/core';
@@ -56,7 +26,6 @@
     username: '',
     password: ''
   });
-
   //语言切换
   function change_Lang() {
     let lang = langT.value ? 'en' : 'zh';
@@ -68,26 +37,63 @@
   function errorClick() {
     ElMessage.info('功能暂未开放');
   }
-
+  const options = ref({
+    lock: true,
+    text: 'Loading',
+    background: 'rgba(0, 0, 0, 0.7)'
+  });
   function sign() {
+    const loadingInstance = ElLoading.service(options.value);
     if (info.username === '' || info.password === '') {
       ElMessage.error('请输入用户名和密码');
       return;
     }
     loginApi(info).then((res) => {
+      loadingInstance.close();
       localStorage.setItem('token', `Bearer ${res.data.access_token}`);
       ElMessage.success('登录成功');
       window.location.href = '/index/data';
     });
   }
 </script>
+<template>
+  <div class="login">
+    <div class="screenfull-lang" @click="change_Lang">
+      <span v-if="isDark">中/英</span>
+      <span style="color: #000" v-else>中/英</span>
+    </div>
+    <div class="toggle">
+      <span @click.stop="toggleDark()"> <span style="color: #fff" v-if="isDark">暗黑</span> <span style="color: #000" v-else>暗黑</span> </span>
+      <el-switch v-model="isDark" />
+    </div>
+    <div class="login-main">
+      <h3>{{ $t('login.title') }}</h3>
+      <div class="login-info">
+        <el-input v-model="info.username" class="login_ipt" style="width: 400px" :prefix-icon="Avatar" :placeholder="$t('login.ipt_name')"></el-input>
+      </div>
+      <div class="login-info">
+        <el-input v-model="info.password" type="password" class="login_ipt" style="width: 400px" :prefix-icon="WarningFilled" :placeholder="$t('login.ipt_psd')"></el-input>
+      </div>
+      <el-button type="info" v-btnAntiShake="sign" class="btn">{{ $t('login.btn_login') }}</el-button>
+      <div class="operation_login">
+        <div><el-checkbox class="operation_login-checkbox" v-model="checked3" />{{ $t('login.tips_btn') }}</div>
+        <div class="forget" @click="errorClick">{{ $t('login.forget_psd') }}</div>
+      </div>
+      <div class="other_login" @click="errorClick">
+        <div>{{ $t('login.btn_bottom') }}</div>
+        <div>{{ $t('login.btn_bottom1') }}</div>
+        <div>{{ $t('login.btn_bottom2') }}</div>
+      </div>
+    </div>
+  </div>
+</template>
+
 <style lang="less" scoped>
   @c: #ccc;
   @import url(@/darkCss/login.less);
   .login {
     height: 100%;
     overflow: hidden;
-    background: url('https://w.wallhaven.cc/full/dp/wallhaven-dp2m9o.png');
     background-size: 100% 100%;
     .toggle {
       float: right;
@@ -101,17 +107,9 @@
     }
     .screenfull-lang {
       float: right;
-      margin: 40px 100px 0 0;
+      margin: 42px 100px 0 0;
       color: #fff;
       cursor: pointer;
-      i {
-        display: block;
-        width: 35px;
-        height: 35px;
-        color: #000;
-        background: url('http://imghz5.linkunst.com//20220615/96171source62a97d4410ca5.png');
-        background-size: 100% 100%;
-      }
     }
     .operation_login {
       width: 400px;
@@ -151,26 +149,27 @@
       width: 400px;
       height: 50px;
       font-size: 20px;
-      background: rgb(244, 164, 96);
+      background: rgb(64, 158, 255);
       margin-top: 30px;
       &:hover {
-        background: rgba(244, 164, 96, 0.9);
+        background: rgba(64, 158, 255, 0.8);
       }
     }
     h3 {
-      text-align: left;
+      text-align: center;
       width: 100%;
       font-size: 36px;
       font-weight: bold;
       color: rgb(50, 49, 49);
     }
     &-main {
-      width: 700px;
-      height: 100%;
-      float: right;
+      width: 100%;
+      height: 85%;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      align-items: center;
+      margin: 0 auto;
     }
     &-info {
       display: flex;

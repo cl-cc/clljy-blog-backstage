@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 程
+ * @Date: 2022-03-24 19:40:38
+ * @LastEditors: 程
+ * @LastEditTime: 2023-09-08 14:24:26
+-->
+<script setup lang="ts"></script>
 <template>
   <el-card class="box-card-component" style="margin-left: 8px">
     <div style="position: relative">
@@ -20,14 +29,11 @@
     </div>
   </el-card>
 </template>
-
-<script setup lang="ts"></script>
-
 <style lang="less" scoped>
-.box-card-component {
-  .progress-item {
-    margin-bottom: 10px;
-    font-size: 14px;
+  .box-card-component {
+    .progress-item {
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
   }
-}
 </style>

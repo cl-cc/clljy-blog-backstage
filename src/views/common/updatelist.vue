@@ -1,3 +1,12 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: 程
+ * @Date: 2022-03-24 19:37:10
+ * @LastEditors: 程
+ * @LastEditTime: 2023-09-08 14:25:36
+-->
+<script setup lang="ts"></script>
 <template>
   <div>
     <el-card class="card" shadow="never">
@@ -25,13 +34,12 @@
     </el-card>
   </div>
 </template>
-<script setup lang="ts"></script>
 <style lang="less" scoped>
-h4 {
-  font-size: 20px;
-  font-weight: bold;
-}
-p {
-  margin: 10px 0;
-}
+  h4 {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  p {
+    margin: 10px 0;
+  }
 </style>

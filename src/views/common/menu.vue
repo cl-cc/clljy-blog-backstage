@@ -4,8 +4,49 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2022-07-19 14:38:41
+ * @LastEditTime: 2023-09-08 14:25:06
 -->
+<script setup lang="ts">
+  import { Grid, Histogram } from '@element-plus/icons-vue';
+  import { useRouter } from 'vue-router';
+  const router = useRouter();
+
+  const defaultPath = ref<string>();
+
+  type MenuItem = {
+    id: number;
+    parent_id: number;
+    rule_name: string;
+    rule_url: string;
+    rule_icon?: string;
+    children?: MenuItem[] | [];
+  };
+
+  type Props = {
+    list?: MenuItem[];
+  };
+
+  //字面量接受
+  withDefaults(defineProps<Props>(), {
+    list: () => []
+  });
+
+  //将item传出去
+  const emit = defineEmits(['on-item']);
+
+  function getItem(item: MenuItem) {
+    emit('on-item', item);
+  }
+
+  //监听
+  watch(
+    () => router,
+    (newValue: any) => {
+      defaultPath.value = newValue.currentRoute.value.fullPath;
+    },
+    { immediate: true, deep: true }
+  );
+</script>
 <template>
   <div class="navBox">
     <template v-for="item in list" :key="item.id">
@@ -31,59 +72,19 @@
     </template>
   </div>
 </template>
-<script setup lang="ts">
-import { Grid, Histogram } from '@element-plus/icons-vue';
-import { useRouter } from 'vue-router';
-const router = useRouter();
 
-const defaultPath = ref<string>();
-
-type MenuItem = {
-  id: number;
-  parent_id: number;
-  rule_name: string;
-  rule_url: string;
-  rule_icon?: string;
-  children?: MenuItem[] | [];
-};
-
-type Props = {
-  list?: MenuItem[];
-};
-
-//字面量接受
-withDefaults(defineProps<Props>(), {
-  list: () => [],
-});
-
-//将item传出去
-const emit = defineEmits(['on-item']);
-
-function getItem(item: MenuItem) {
-  emit('on-item', item);
-}
-
-//监听
-watch(
-  () => router,
-  (newValue: any) => {
-    defaultPath.value = newValue.currentRoute.value.fullPath;
-  },
-  { immediate: true, deep: true }
-);
-</script>
 <script lang="ts">
-export default {
-  name: 'Menu',
-};
+  export default {
+    name: 'Menu'
+  };
 </script>
 <style lang="less" scoped>
-@import url(@/darkCss/menu.less);
-.navBox {
-  height: 100%;
-  border-right: 1px solid rgb(221, 206, 206);
-}
-.childrenDom {
-  padding-left: 40px !important;
-}
+  @import url(@/darkCss/menu.less);
+  .navBox {
+    height: 100%;
+    border-right: 1px solid rgb(221, 206, 206);
+  }
+  .childrenDom {
+    padding-left: 40px !important;
+  }
 </style>

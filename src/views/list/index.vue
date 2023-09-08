@@ -4,14 +4,8 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2022-11-17 15:24:33
+ * @LastEditTime: 2023-09-08 14:23:26
 -->
-<template>
-  <div style="margin-top: 20px">
-    <!-- table -->
-    <itemTable @on-list="go_page" :list="tableList.tableData" :page="tableList.num" v-if="tableList.tableData.length" />
-  </div>
-</template>
 <script setup lang="ts">
   import itemTable from './common/table.vue';
   import { listsApi } from '@/api/lists';
@@ -73,4 +67,11 @@
     });
   }
 </script>
+<template>
+  <div style="margin-top: 20px">
+    <!-- table -->
+    <itemTable @on-list="go_page" :list="tableList.tableData" :page="tableList.num" v-if="tableList.tableData.length" />
+  </div>
+</template>
+
 <style lang="less" scoped></style>

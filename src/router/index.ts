@@ -1,3 +1,11 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: 程
+ * @Date: 2022-07-19 14:51:08
+ * @LastEditors: 程
+ * @LastEditTime: 2023-09-08 14:05:55
+ */
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 declare module 'vue-router' {
@@ -29,7 +37,7 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           title: '首页',
           i18nText: 'index',
-          transition: 'animate__backInLeft'
+          transition: 'animate__bounceInLeft'
         },
         component: () => import('@/views/data.vue')
       },
@@ -38,43 +46,16 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           title: '列表',
           i18nText: 'list',
-          transition: 'animate__backInLeft'
+          transition: 'animate__bounceInLeft'
         },
         component: () => import('@/views/list/index.vue')
-      },
-      {
-        path: '/index/complexList',
-        meta: {
-          title: '复杂列表',
-          i18nText: 'complexList',
-          transition: 'animate__backInLeft'
-        },
-        component: () => import('@/views/complexList/index.vue')
-      },
-      {
-        path: '/index/packageList',
-        meta: {
-          title: '封装列表',
-          i18nText: 'packageList',
-          transition: 'animate__backInLeft'
-        },
-        component: () => import('@/views/packageList/index.vue')
-      },
-      {
-        path: '/index/signList',
-        meta: {
-          title: '掘金签到列表',
-          i18nText: 'signList',
-          transition: 'animate__backInLeft'
-        },
-        component: () => import('@/views/signList/index.vue')
       },
       {
         path: '/error/401',
         meta: {
           title: '401',
           i18nText: 'fourHundredAndOne',
-          transition: 'animate__backInLeft'
+          transition: 'animate__bounceInLeft'
         },
         component: () => import('@/views/error/401.vue')
       },
@@ -83,36 +64,9 @@ const routes: Array<RouteRecordRaw> = [
         meta: {
           title: '404',
           i18nText: 'fourHundredAndFour',
-          transition: 'animate__backInLeft'
+          transition: 'animate__bounceInLeft'
         },
         component: () => import('@/views/error/404.vue')
-      },
-      {
-        path: '/bigdata/index',
-        meta: {
-          title: '流程图',
-          i18nText: 'trendCharts',
-          transition: 'animate__backInLeft'
-        },
-        component: () => import('@/views/bigdata/index.vue')
-      },
-      {
-        path: '/tool/screenshotTool',
-        meta: {
-          title: '截图工具',
-          i18nText: 'screenshotTool',
-          transition: 'animate__backInLeft'
-        },
-        component: () => import('@/views/tool/screenshotTool.vue')
-      },
-      {
-        path: '/ai/index',
-        meta: {
-          title: '聊天机器人',
-          i18nText: 'chatbot',
-          transition: 'animate__backInLeft'
-        },
-        component: () => import('@/views/ai/index.vue')
       },
       {
         path: '/:catchAll(.*)',
