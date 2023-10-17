@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:44:50
+ * @LastEditTime: 2023-09-12 19:51:09
  */
 // en.ts 文件内容
 
@@ -23,7 +23,8 @@ export default {
   menuRouter: {
     index: 'index',
     iconsComponents: 'systemManagement',
-    list: 'articleList'
+    list: 'articleList',
+    test: '3DView'
   },
   home: {
     card: 'New Visits',
@@ -34,14 +35,6 @@ export default {
   navBar: {
     index: 'index',
     list: 'list',
-    complexList: 'complexList',
-    packageList: 'packageList',
-    signList: 'signList',
-    data: 'data',
-    fourHundredAndOne: '401',
-    fourHundredAndFour: '404',
-    trendCharts: 'trendCharts',
-    tool: 'tool',
-    screenshotTool: 'screenshotTool'
+    test: '3DView'
   }
 };

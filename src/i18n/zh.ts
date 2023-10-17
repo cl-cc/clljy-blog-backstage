@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:44:37
+ * @LastEditTime: 2023-09-12 19:51:05
  */
 // zh.ts 文件内容
 
@@ -23,7 +23,8 @@ export default {
   menuRouter: {
     index: '系统首页',
     iconsComponents: '系统管理',
-    list: '文章列表'
+    list: '文章列表',
+    test: '3D视图'
   },
   home: {
     card: '最新访问',
@@ -34,14 +35,6 @@ export default {
   navBar: {
     index: '首页',
     list: '列表',
-    complexList: '复杂列表',
-    packageList: '封装列表',
-    signList: '掘金签到列表',
-    fourHundredAndOne: '401',
-    fourHundredAndFour: '404',
-    dataVisualization: '数据可视化',
-    trendCharts: '流程图',
-    tool: '工具',
-    screenshotTool: '截图工具'
+    test: '3D视图'
   }
 };

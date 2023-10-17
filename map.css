@@ -1,0 +1,39 @@
+.layui-container {
+  width: 100vw;
+  display: flex;
+  position: absolute;
+  background-color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+  height: 58px;
+  line-height: 58px;
+  margin: 0px;
+  z-index: 2;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08)
+}
+
+#fengmap {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  background-color: #777;
+}
+
+.fm-layui-btn-active {
+  background-color: #2f65ee;
+  color: white;
+  border: 1px solid #2f65ee;
+}
+
+.layui-btn {
+  background-color: #2f65ee;
+  color: white;
+}
+
+.info-card {
+  position: absolute;
+  top: 63px;
+  left: 10px;
+  z-index: 2;
+}

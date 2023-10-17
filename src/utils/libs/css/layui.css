@@ -1,0 +1,236 @@
+.layui-btn {
+  background-color: #eeeeee;
+  color: rgba(0, 0, 0, 0.7);
+  border-radius: 6px;
+  line-height: 36px;
+}
+
+.layui-btn-primary {
+  background-color: #2f65ee;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.layui-btn:hover {
+  background-color: #eeeeee;
+  color: rgba(0, 0, 0, 0.7);
+  opacity: 1;
+}
+
+.layui-btn-primary:hover {
+  background-color: #2f65ee;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffffff;
+  border-color: #2f65ee;
+}
+
+.layui-form-select dl dd.layui-this {
+  background-color: #69c0ff;
+  color: #fff;
+}
+
+.layui-form-label {
+  position: relative;
+  display: block;
+  padding: 0px 0px 16px 0px;
+  width: auto;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  float: none;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.layui-input-block {
+  margin-left: 0px;
+  min-height: 36px;
+}
+
+.layui-form-checked[lay-skin='primary'] i {
+  border-color: #69c0ff !important;
+  background-color: #69c0ff;
+  color: #fff;
+}
+
+.layui-form-checkbox[lay-skin='primary']:hover i {
+  border-color: #69c0ff;
+  color: #fff;
+}
+
+.layui-btn-primary {
+  color: #fff;
+}
+
+.layui-slider-wrap-btn {
+  border: 2px solid white !important;
+  background-color: #2f65ee;
+  box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+.layui-slider-bar {
+  background: #2f65ee !important;
+}
+
+.layui-input-block-slider {
+  min-height: 0px;
+  margin-top: 10px;
+}
+
+/* layui-card 信息面板 =============================================start */
+.layui-card {
+  background: #ffffff;
+  box-shadow: 0px 0px 8px 0px #edf0f3;
+  padding: 18px;
+}
+
+.layui-card .layui-card-header {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+  line-height: 20px;
+  height: auto;
+  border-bottom: none;
+}
+
+.layui-card .layui-card-header i {
+  font-size: 16px;
+  color: #000;
+  margin-right: 10px;
+}
+
+.layui-card.card .info .layui-card-body {
+  padding-top: 20px;
+}
+
+.layui-card .layui-card-body p {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: flex-start;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.7);
+  line-height: 20px;
+}
+
+.layui-card .layui-card-body p:last-child {
+  margin-bottom: 0;
+}
+
+.layui-card .layui-card-body p label {
+  display: inline-block;
+  width: 112px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* layui-card 信息面板 =============================================end */
+
+.layui-input {
+  height: 38px;
+  border-radius: 6px;
+  border: 1px solid #dddddd;
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+.layui-input-disabled {
+  background-color: #f5f7fb;
+}
+
+.layui-colorpicker {
+  width: 20px;
+  height: 20px;
+  border: none;
+  padding: 8px;
+  border-radius: 2px;
+  line-height: 24px;
+  display: inline-block;
+  cursor: pointer;
+  transition: all 0.3s;
+  -webkit-transition: all 0.3s;
+}
+
+.layui-colorpicker span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.layui-icon-down {
+  display: none;
+}
+
+.layui-form-item {
+  margin-bottom: 16px;
+}
+
+.layui-form-item .layui-inline {
+  margin-bottom: 0;
+  margin-right: 0;
+}
+
+/* checkbox 选中样式 ---------------------start*/
+.layui-form-checked[lay-skin='primary'] i {
+  border-color: #2f65ee !important;
+  background-color: #2f65ee;
+}
+
+/* checkbox 选中样式 ---------------------end*/
+
+/* 颜色拾取器按钮样式 ---------------------start*/
+.layui-colorpicker-main-input .layui-btn-container .layui-btn {
+  line-height: 28px;
+}
+
+/* 颜色拾取器按钮样式 ---------------------end*/
+
+.layui-tab-brief>.layui-tab-title .layui-this {
+  color: #005cf8;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.layui-tab-brief>.layui-tab-more li.layui-this:after,
+.layui-tab-brief>.layui-tab-title .layui-this:after {
+  border-bottom: 2px solid #005cf8;
+}
+
+/* 表格样式 ---------------------start*/
+
+.layui-table-view {
+  margin: 0px;
+}
+
+.layui-border-box {
+  border: none;
+}
+
+.layui-table-cell {
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.65);
+}
+
+.layui-table-cell span {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+/* 表格样式 ---------------------end*/
+
+
+/* 颜色拾取 ---------------------start*/
+.layui-colorpicker-main .layui-colorpicker-main-input .layui-btn-container .layui-btn:first-child {
+  display: none;
+}
+
+.layui-colorpicker-main .layui-colorpicker-main-input .layui-btn-container .layui-btn:last-child {
+  background-color: #2f65ee;
+  color: #fff;
+  width: 60px;
+}
+
+/* 颜色拾取 ---------------------end*/

@@ -1,0 +1,178 @@
+html,
+body,
+#fengmap {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    outline:none;
+    font-family: "Noto Sans SC";
+}
+
+.my-popup {
+    background: #2c3e50;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 2px;
+    border: none;
+    box-shadow: none;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    display: inline-block !important;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.search-info-boxselect {
+    position: absolute;
+    right: 36px;
+    top: 96px;
+    z-index: 9999;
+    color: #ffffff;
+    max-height: 320px;
+    overflow-y: auto;
+}
+
+.search-info-boxselect::-webkit-scrollbar {
+    width: 3px;
+    /*对垂直流动条有效*/
+    height: 6px;
+    /*对水平流动条有效*/
+}
+
+.search-info-boxselect::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.search-info-boxselect::-webkit-scrollbar-track {
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.search-info-boxselect div {
+    width: 215px;
+    height: 46px;
+    line-height: 46px;
+    background: #076ED7;
+    margin-bottom: 10px;
+    padding: 0 12px;
+}
+
+.search-info-boxselect li {
+    list-style-type: none;
+    padding: 0 12px;
+    width: 215px;
+    background: #0D5EB1;
+    height: 32px;
+    line-height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#tips {
+    position: absolute;
+    right: 36px;
+    top: 36px;
+    z-index: 9999;
+    width: 500px;
+}
+
+.tips {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: right;
+    -webkit-text-stroke: 1px #5c8dfb;
+    text-shadow: 2px 2px 0 #000000;
+}
+
+.domContainer img {
+    width: 45px;
+    border-radius: 40%;
+}
+
+#layers {
+    position: absolute;
+    top: 36px;
+    left: 36px;
+    z-index: 9999;
+    list-style: none;
+    margin: 0px;
+    padding: 0;
+}
+
+#layers > li > button, #foo > li > button {
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #076ed7;
+    width: 150px;
+    height: 36px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+#layers > li > button:hover, #foo > li > button:hover {
+    background: #3498FE;
+}
+
+#editorTips {
+    position: absolute;
+    right: 36px;
+    top: 82px;
+    z-index: 9999;
+    margin-top: 5px;
+}
+
+#editorTips1, #editorTips2 {
+    font-size: 18px;
+    color: #FFFFFF;
+    text-align: right;
+    -webkit-text-stroke: 1px #5c8dfb;
+    text-shadow: 2px 2px 0 #000000;
+}
+
+#editorTips3 {
+    font-size: 18px;
+    color: #FE8034;
+    margin-top: 20px;
+    text-align: right;
+}
+
+#editor {
+    position: absolute;
+    right: 36px;
+    top: 36px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+}
+
+#editor button {
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #076ed7;
+    height: 36px;
+    cursor: pointer;
+    border: none;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+#editor button:hover {
+    background: #3498FE;
+}
+
+#editor button:not(:last-child) {
+    border-right: 1px solid #014B9D;
+}
+
+#editor button img {
+    width: 16px;
+    margin-right: 6px;
+}

@@ -1,0 +1,104 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+  font-family: MicrosoftYaHei;
+}
+
+ul {
+  display: block;
+  list-style-type: disc;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding-inline-start: 0px;
+}
+
+#fengmap {
+  width: 100%;
+  height: 100%;
+}
+
+/* 工具菜单 */
+.toolBarDiv {
+  position: absolute;
+  width: 100%;
+  height: 58px;
+  background: #fff;
+  z-index: 2;
+}
+
+.toolBarDiv > .control {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding-left: 20px;
+}
+
+#layers {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 10px;
+}
+
+.set {
+  display: flex;
+  justify-content: center;
+}
+
+.setup {
+  width: 60px;
+  height: 32px;
+  background: #2f65ee;
+  border-radius: 4px;
+  color: white;
+  font-weight: bold;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 16px;
+}
+
+.blue {
+  width: 4px;
+  height: 12px;
+  background: #2776fb;
+  border-radius: 2px;
+  margin-right: 8px;
+  display: inline-block;
+}
+
+.title > i {
+  position: absolute;
+  right: 18px;
+  display: inline-block;
+  /* width: 30px; */
+  /* height: 30px; */
+  cursor: pointer;
+  user-select: none;
+}
+
+/* layui slider样式 */
+.sliderItem > .layui-input-block {
+  padding-top: 6px;
+  min-height: 20px;
+}
+
+.tableInfoBox {
+  z-index: 9;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
+  background: #ffffff;
+  padding: 24px 16px;
+  box-sizing: border-box;
+  border-radius: 8px 8px 0px 0px;
+}

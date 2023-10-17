@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-03-23 15:44:25
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:46:05
+ * @LastEditTime: 2023-09-12 19:54:36
 -->
 <script setup lang="ts">
   import screenfull from '@/components/screenfull/index.vue';
@@ -33,6 +33,7 @@
       margin-left: 20px;
       font-size: 20px;
       color: #fff;
+      margin-bottom: 0;
     }
     &-box {
       width: 50%;

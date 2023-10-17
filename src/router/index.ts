@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-07-19 14:51:08
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:05:55
+ * @LastEditTime: 2023-09-12 11:44:54
  */
 import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
@@ -49,6 +49,15 @@ const routes: Array<RouteRecordRaw> = [
           transition: 'animate__bounceInLeft'
         },
         component: () => import('@/views/list/index.vue')
+      },
+      {
+        path: '/index/test',
+        meta: {
+          title: 'test',
+          i18nText: 'list',
+          transition: 'animate__bounceInLeft'
+        },
+        component: () => import('@/views/test/index.vue')
       },
       {
         path: '/error/401',

@@ -4,7 +4,7 @@
  * @Author: 程
  * @Date: 2022-06-30 17:18:52
  * @LastEditors: 程
- * @LastEditTime: 2023-09-08 14:25:27
+ * @LastEditTime: 2023-09-12 19:49:49
 -->
 <script lang="ts" setup>
   import Menu from './menu.vue';
@@ -48,6 +48,14 @@
           rule_name: '系统管理',
           i18n_text: 'list',
           rule_url: '/index/list'
+        },
+        {
+          id: 2,
+          parent_id: 2,
+          rule_icon: 'Expand',
+          rule_name: '测试',
+          i18n_text: 'test',
+          rule_url: '/index/test'
         }
       ]
     }
